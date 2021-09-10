@@ -1,0 +1,32 @@
+﻿@model ProjetoK1.Models.Categoria
+
+@{ ViewData["Title"] = "Nova Categoria"; }
+
+<div class="container p-5">
+    <div class="row" style="margin-left: 270px;">
+        <div class="col-6 border border-light rounded p-5 shadow">
+            <h6>Nova categoria</h6>
+            <hr />
+
+            <form asp-action="NovaCategoria">
+                <div class="form-group">
+                    <label>Nome</label>
+                    <input asp-for="Nome" type="text" class="form-control form-control-sm" />
+                </div>
+                <hr />
+                <div class="container">
+                    <div class="row">
+                        <div>
+                            <button type="submit" class="btn btn-sm btn-success">
+                                Salvar
+                            </button>
+                            <a class="btn btn-sm btn-info" asp-action="Index">Voltar</a>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+</div>

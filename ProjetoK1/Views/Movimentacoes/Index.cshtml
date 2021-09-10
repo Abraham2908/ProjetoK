@@ -1,0 +1,70 @@
+﻿@model IEnumerable<ProjetoK1.Models.Movimentacao>
+
+@{
+    ViewData["Title"] = "Movimentações Registradas";
+}
+
+<div class="container p-5">
+    <div class="border border-light rounded p-5">
+        <h3>Movimentações Registradas:</h3>
+        <br />
+        <p>
+            <a class="btn btn-success" asp-action="Create">Nova Movimentação</a>
+        </p>
+
+        <hr />
+
+        <table class="table table-striped table-hover table-sm">
+            <thead>
+                <tr class="thead-light">
+                    <th>
+                        @Html.DisplayNameFor(model => model.DataMovimentacao)
+                    </th>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model.Produto)
+                    </th>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model.Tipo)
+                    </th>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model.Quantidade)
+                    </th>
+
+                    <th>
+                        Ações
+                    </th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DataMovimentacao)
+                        </td>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Produto.Nome)
+                        </td>
+
+                        <td>
+                            @Enum.GetName(typeof(TipoEnum), item.Tipo)
+                        </td>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Quantidade)
+                        </td>
+
+                        <td>
+                            <a class="btn btn-danger btn-sm" asp-action="Delete" asp-route-id="@item.MovimentacaoId">Excluir</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

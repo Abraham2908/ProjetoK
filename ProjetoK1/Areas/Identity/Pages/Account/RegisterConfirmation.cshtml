@@ -1,0 +1,25 @@
+﻿@page
+@model RegisterConfirmationModel
+@{
+    ViewData["Title"] = "Confirmação de Cadastro:";
+}
+
+<h3>@ViewData["Title"]</h3>
+@{
+    if (@Model.DisplayConfirmAccountLink)
+    {
+        <br />
+        <p>
+            Você deve confirmar a sua conta para ter acesso ao Sistema.
+            <br />
+            <br />
+            <a class="btn btn-info btn-lg" id="confirm-link" href="@Model.EmailConfirmationUrl">Clique aqui para confirmar a sua conta!</a>
+        </p>
+    }
+    else
+    {
+        <p>
+            Verifique o seu email para confirmar a sua conta.
+        </p>
+    }
+}

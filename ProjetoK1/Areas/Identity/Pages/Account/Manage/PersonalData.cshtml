@@ -1,0 +1,25 @@
+﻿@page
+@model PersonalDataModel
+@{
+    ViewData["Title"] = "Dados Pessoais";
+    ViewData["ActivePage"] = ManageNavPages.PersonalData;
+}
+
+<h4>@ViewData["Title"]</h4>
+
+<div class="row">
+    <div class="col-md-6">
+        <p>Sua conta contêm  seus dados. Essa página permite que você exclua sua conta e esses dados.</p>
+        <p>
+            <strong>A exclusão removerá permanentemente sua conta, ela não poderá ser recuperada.</strong>
+        </p>
+        <p>
+            <br />
+            <a id="delete" asp-page="DeletePersonalData" class="btn btn-danger">Excluir</a>
+        </p>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
