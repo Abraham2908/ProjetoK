@@ -30,7 +30,8 @@ Tabela de conteúdos
 
 :computer: Projeto K - é uma aplicação base para cadastro de produtos e gestão de estoque.
 
-A aplicação serve de base e de modelo para sistemas Web de gerenciamento em geral. Contando com o registro de produtos e movimentações de entrada e saída. Assim como, listagem das movimentações realizadas.<br/><br/>
+A aplicação serve de base e de modelo para sistemas Web de gerenciamento em geral. Contando com o registro de produtos e movimentações de entrada e saída. 
+Assim como, listagem das movimentações realizadas.<br/><br/>
 O sistema conta com diversas possibilidades de aprimoramento e implementações que podem ser realizadas em cima do Projeto.
 
 ---
@@ -64,8 +65,8 @@ Visual Studio 2019 -
   Clone este repositório
 $ git clone https://github.com/Abraham2908/ProjetoK
 
-# Abra seu VS 2019, selecione a opção abrir um projeto ou uma solução, vá até o diretorio onde o projeto foi clonado e selecione 
-# o ProjetoK1.sln.
+# Abra seu VS 2019, selecione a opção abrir um projeto ou uma solução, vá até o diretorio onde 
+# o projeto foi clonado e selecione o ProjetoK1.sln.
 
 Entity Framework Core
 
