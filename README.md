@@ -84,13 +84,15 @@ Entity Framework Core
 
 Banco de Dados - SQL Server
 
-# O banco de dados está configurado para o LocalDB, versão mais leve do mecanismo do SQL Server destinado ao ambiente 
-# de desenvolvimento. Para mudar a conexão se necessário, é só ir até o arquivo appsettings.json e alterar a Connection string como desejar.
+# O banco de dados está configurado para o LocalDB, versão mais leve do mecanismo do SQL Server destinado
+# ao ambiente de desenvolvimento. 
+# Para mudar a conexão se necessário, é só ir até o arquivo appsettings.json e alterar a Connection string como desejar.
 
 # Abra o Package Manager Console e digite o comando: Update-database
 
-# Abra o SQL Server Object Explorer e em seguida clique no (localdb), vá ate o banco de dados projetok1 e verifique a aba tables para verificar
-# se as tables foram criadas. Caso não, digite no Package Manager Console o comando: Add-migration (nome) e em seguida Update-database
+# Abra o SQL Server Object Explorer e em seguida clique no (localdb), vá ate o banco de dados projetok1
+# e verifique a aba tables para verificar se as tables foram criadas.
+# Caso não, digite no Package Manager Console o comando: Add-migration (nome) e em seguida Update-database
 
 # Execute o projeto teclando Ctrl + F5.
 
