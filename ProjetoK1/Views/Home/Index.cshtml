@@ -1,6 +1,8 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+@{ ViewData["Title"] = "Home Page"; }
 
 <div class="text-inicio text-center">
     <h3 class="display-4">Projeto K</h3>
@@ -11,27 +13,10 @@
     </p>
 </div>
 
-<div style="margin-left: 20px;">
+@if (!SignInManager.IsSignedIn(User))
+{
+<div class="text-center" style="padding-top:100px;">
 
-    <h5>Páginas do Sistema:</h5>
-    <ul>
-        <li>Login</li>
-        <li>Cadastro de Usuários</li>
-        <li>Cadastro de Produtos</li>
-        <li>Listagem de Produtos (Estoque)</li>
-        <li>Movimentações - Entrada / Saída</li>
-        <li>Visualização das movimentações realizadas</li>
-    </ul>
-    <br />
-    <h5>Desenvolvimento:</h5>
-    <ul>
-        <li> A aplicação foi desenvolvida em C# e .Net Core 3.1, possui sistema de cadastro/autenticação - Framework Identity.</li>
-    </ul>
-    <br />
-    <h5>Banco de Dados:</h5>
-    <ul>
-        <li> SQL Server</li>
-    </ul>
-
-    <h6><b>Cadastre-se para utilizar.</b></h6>
+    <h5><b> Cadastre-se ou faça Login para começar. </b></h5>
 </div>
+}
